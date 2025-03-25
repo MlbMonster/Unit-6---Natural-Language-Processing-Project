@@ -34,8 +34,23 @@ Record a short video of your project to display here on your README. You can do 
 
 ## Project Description
 
-Write a description of the goal and/or problem that your application. Include descriptions of what text is being analyzed, either if its text files you are using to interpret text an how the user interacts with your project.
+The goal of this application is to provide a simple English-to-Spanish translation tool. The application allows users to input a sentence in English, which is then processed and translated word by word into Spanish. If a word is not found in the translation dictionary, the program notifies the user. The program utilizes a predefined text file, English2Spanish.txt, which contains a dictionary of English words and their corresponding Spanish translations. Users interact with the application through the console, where they are prompted to enter an English sentence. The translated sentence is then displayed as output.
 
 ## NLP Techniques
 
-Write a description of what natural lanugage technique (NLP) you implemented in your project. State which methods in your project are associated with this, and a brief explanation of how those methods word and how they are necessary in the NLP technique. 
+NLP Techniques
+Splitting Sentences into Words (Tokenization)
+- Method: translateSentence(String sentence)
+- This method breaks a sentence into individual words so each word can be translated separately.
+
+Removing Punctuation
+- Method: removeTailPeriodOrComma(String[] words)
+- This method removes extra punctuation like commas and periods to ensure words match the dictionary.
+
+Finding Translations (Dictionary Lookup)
+- Method: findEnglishWordIndex(String word)
+- This method searches for a word in the dictionary and finds its Spanish equivalent. If the word is not found, the user is informed.
+
+Rebuilding the Sentence
+- Method: translateSentence(String sentence)
+- This method puts the translated words back together into a full sentence.
